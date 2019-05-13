@@ -46,7 +46,7 @@ module ActiveStorage
       end
 
       def video_stream
-        @video_stream ||= streams.detect { |stream| ['video', 'audio'].include? stream['codec_type'] } || {}
+        @video_stream ||= streams.detect { |stream| ['video'].include? stream['codec_type'] } || {}
       end
     end
   end
